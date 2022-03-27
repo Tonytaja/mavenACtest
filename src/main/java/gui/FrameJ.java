@@ -18,7 +18,9 @@ public class FrameJ {
 //
 //        frame.getContentPane().setBackground(new Color( 55,12,120)); //change background color
 
-        MyFrame myFrame= new MyFrame();
+       // MyFrame myFrame= new MyFrame();
+       // new MyButtons();
+        new Buttons();
 
     }
 
