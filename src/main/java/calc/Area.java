@@ -20,11 +20,10 @@ public class Area extends Buttons {
     ImageIcon iconRectangle = new ImageIcon("src/main/java/calc/prostokat.png");
     ImageIcon iconRectangleTriangle = new ImageIcon("src/main/java/calc/triangle2.png");
     ImageIcon iconPentagram = new ImageIcon("src/main/java/calc/pentagram.png");
-    ImageIcon iconReturn = new ImageIcon("src/main/java/calc/return.png");
-
+    ImageIcon iconTrapeze = new ImageIcon("src/main/java/calc/trapeze.png");
     Area(){
         JLabel label1 =new JLabel();
-        label1.setText("Welcome, please which figure do you want" );
+        label1.setText("Welcome, to area calculator" );
         label1.setFont(new Font("MV Boli", Font.BOLD,20));
 
         button1.button.setText("Circle");
@@ -53,18 +52,46 @@ public class Area extends Buttons {
         button3.button.setText("Triangle");
         button3.button.setIcon(iconTriangle);
         button3.button.setBounds(100,50,100,50);
+        button3.button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.dispose();
+                Triangle triangle = new Triangle();
+            }
+        });
 
         button4.button.setText("Rectangle");
         button4.button.setIcon(iconRectangle);
         button4.button.setBounds(250,50,100,50);
+        button4.button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.dispose();
+                Rectangular rectangular = new Rectangular();
+            }
+        });
 
-        button5.button.setText("Rectangular Triangle");
-        button5.button.setIcon(iconRectangleTriangle);
+        button5.button.setText("Trapeze");
+        button5.button.setIcon(iconTrapeze);
         button5.button.setBounds(200,50,100,50);
+        button5.button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.dispose();
+                Trapeze trapeze = new Trapeze();
+            }
+        });
 
         button6.button.setText("Pentagon");
         button6.button.setIcon(iconPentagram);
         button6.button.setBounds(50,50,100,50);
+        button6.button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.dispose();
+                Pentagon pentagon = new Pentagon();
+            }
+        });
 
         returnButton.button.setText("Return");
         returnButton.button.setIcon(iconReturn);

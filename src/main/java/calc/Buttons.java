@@ -10,6 +10,7 @@ public class Buttons {
     JButton button = new JButton();
 
     ImageIcon icon= new ImageIcon("src/main/java/gui/pp.jpg");
+    ImageIcon iconReturn = new ImageIcon("src/main/java/calc/return.png");
     Buttons(){
         button.setBounds(0,0,100,50);
         button.setText("Button");

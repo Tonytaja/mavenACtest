@@ -6,15 +6,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.DecimalFormat;
 
-public class Sphere extends WindowVolumeFigures{
+public class Cube extends WindowVolumeFigures {
 
-    private final double PI=3.14285714286;
-    public Sphere(){
-        ImageIcon formula= new ImageIcon("src/main/java/calc/sphereFormula.png");
+    public Cube(){
+        ImageIcon formula= new ImageIcon("src/main/java/calc/cubeFormula.png");
         Image fm= formula.getImage().getScaledInstance(300,170,Image.SCALE_SMOOTH);
         formula= new ImageIcon(fm);
 
-        ImageIcon figure = new ImageIcon("src/main/java/calc/sphere.png");
+        ImageIcon figure = new ImageIcon("src/main/java/calc/cube.png");
         Image fig = figure.getImage().getScaledInstance(250,250,5);
         figure= new ImageIcon(fig);
 
@@ -22,7 +21,7 @@ public class Sphere extends WindowVolumeFigures{
 
         label3.setIcon(formula);
         label4.setIcon(figure);
-        textField.setText("Enter radius:");
+        textField.setText("Enter edge:");
 
 
         button1.addActionListener(new ActionListener() {
@@ -30,17 +29,11 @@ public class Sphere extends WindowVolumeFigures{
             public void actionPerformed(ActionEvent e) {
 
                 Double text = Double.valueOf((String) textField.getText());
-                double div = 1.33333333;
-                double ty= (PI*div)*(Math.pow(text,3));
+                double ty= (Math.pow(text,3));
                 DecimalFormat df = new DecimalFormat("###.###");
                 solution.setText(df.format(ty));
 
             }});
 
     }
-//    @Override
-//    public double calculateTheVolume() {
-//        double div= (double) 4/3;
-//        return PI *div * Math.pow(radius,3);
-//    }
 }

@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.text.DecimalFormat;
 
 public class Circle extends WindowFigures{
     private double radius;
@@ -20,16 +21,22 @@ public class Circle extends WindowFigures{
         Image fig = figure.getImage().getScaledInstance(250,250,5);
         figure= new ImageIcon(fig);
 
+
+
         label3.setIcon(formula);
         label4.setIcon(figure);
+        textField.setText("Enter radius:");
+
+
         button1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (e.getSource()==button){
-                    Double text = Double.valueOf((String) textField.getText());
-                    double ty= text*text;
 
-                }
+                    Double text = Double.valueOf((String) textField.getText());
+                    double ty= PI*(text*text);
+                DecimalFormat df = new DecimalFormat("###.###");
+                solution.setText(df.format(ty));
+
             }});
 
 

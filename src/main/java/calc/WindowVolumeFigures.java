@@ -4,16 +4,13 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.text.DecimalFormat;
 
-public class WindowFigures extends Buttons  {
-
+public class WindowVolumeFigures {
     JFrame frame =new JFrame();
     JButton button1= new JButton("Submit");
     JButton returnButton= new JButton();
     ImageIcon iconReturn = new ImageIcon("src/main/java/calc/return.png");
     Image icc = iconReturn.getImage().getScaledInstance(80,40,5);
-
 
     JTextField textField;
     JTextField solution;
@@ -32,7 +29,7 @@ public class WindowFigures extends Buttons  {
     JPanel panel7= new JPanel();
     JPanel panel8= new JPanel();
 
-    WindowFigures(){
+    WindowVolumeFigures(){
 
         ImageIcon formula= new ImageIcon("src/main/java/calc/circleFromula.png");
         Image fm= formula.getImage().getScaledInstance(300,170,Image.SCALE_SMOOTH);
@@ -43,11 +40,10 @@ public class WindowFigures extends Buttons  {
         ImageIcon figure = new ImageIcon("src/main/java/calc/circle.png");
         Image fig = figure.getImage().getScaledInstance(250,250,5);
         figure= new ImageIcon(fig);
-
         label1.setText("Welcome please enter your values ");
         label1.setFont(new Font("MV Boli", Font.BOLD,20));
 
-        label2.setText("Solution:");
+        label2.setText("Volume = ");
         label3.setText("The Formula : ");
         label3.setHorizontalTextPosition(JLabel.CENTER);
         label3.setVerticalTextPosition(JLabel.TOP);
@@ -74,6 +70,7 @@ public class WindowFigures extends Buttons  {
         button1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
             }
         });
 
@@ -84,7 +81,7 @@ public class WindowFigures extends Buttons  {
             @Override
             public void actionPerformed(ActionEvent e) {
                 frame.dispose();
-                Area area = new Area();
+                Volume volume = new Volume();
             }
         });
 
@@ -124,7 +121,7 @@ public class WindowFigures extends Buttons  {
         panel3.add(panel8,BorderLayout.EAST);
 
 
-        frame.setTitle("Calculator AREA ");
+        frame.setTitle("Calculator Volume ");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setResizable(false);
         frame.setSize(620,620);
@@ -138,4 +135,5 @@ public class WindowFigures extends Buttons  {
 
         frame.setVisible(true);
     }
-}
+    }
+
