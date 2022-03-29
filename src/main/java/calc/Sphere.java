@@ -1,11 +1,12 @@
 package calc;
 
-public class Sphere extends Volume{
+public class Sphere extends WindowVolumeFigures{
 
     private double radius;
     private final double PI=3.14285714286;
-    public Sphere(double radius){
-        this.radius=radius;
+    public Sphere(){
+
+
     }
 //    @Override
 //    public double calculateTheVolume() {
